@@ -11,7 +11,7 @@ public class MOVE_INIMIGO : MonoBehaviour
     private float velocidadeMovimento;
 
     [SerializeField]
-    private Rigidbody2D rigidbody;
+    private Rigidbody2D myrigidbody;
     // Update is called once per frame
     void Update()
     {
@@ -20,7 +20,7 @@ public class MOVE_INIMIGO : MonoBehaviour
         Vector2 direcao = posicaoAlvo - posicaoAtual;
         direcao = direcao.normalized;
         
-        this.rigidbody.velocity = (this.velocidadeMovimento * direcao);
+        this.myrigidbody.velocity = (this.velocidadeMovimento * direcao);
 
     }
 }
