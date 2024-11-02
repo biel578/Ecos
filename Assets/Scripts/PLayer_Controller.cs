@@ -43,7 +43,7 @@ public class PLayer_Controller : MonoBehaviour
 
         if(Input.GetButtonDown("Fire1"))
             playerAnimator.SetTrigger("atacar");
-           
+            
 
         if (input_x > 0 && !facingR)
         {
