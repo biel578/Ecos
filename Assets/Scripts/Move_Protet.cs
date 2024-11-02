@@ -38,15 +38,7 @@ public class Move_Protet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcurarJogador();
-        if (this.alvo != null)
-        {
-            Mover();
-        }
-        else
-        {
-            PararMovimentacao();
-        }
+        OnTriggerStay2D();
     }
 
     private void OnDrawGizmos(){
@@ -114,6 +106,17 @@ public class Move_Protet : MonoBehaviour
             this.animator.SetBool("movendo", false);
         }
 
+    }
+
+    private void OnTriggerStay2D(Collider2D collider)
+    {
+        if(collider.CompareTag("Player"))
+        {
+            collider.Rigidbody.AddForce(-0.1F * this.GetComponent<Collider>().Rigidbody.velocity);
+            this.
+        }else{
+            PararMovimentacao();
+        }
     }
 
     private void PararMovimentacao()
