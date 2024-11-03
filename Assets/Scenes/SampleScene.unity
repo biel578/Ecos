@@ -1504,7 +1504,6 @@ GameObject:
   - component: {fileID: 888830227}
   - component: {fileID: 888830226}
   - component: {fileID: 888830225}
-  - component: {fileID: 888830232}
   - component: {fileID: 888830233}
   - component: {fileID: 888830231}
   - component: {fileID: 888830228}
@@ -1690,7 +1689,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &888830231
 MonoBehaviour:
@@ -1716,21 +1715,6 @@ MonoBehaviour:
   - {fileID: 492085074}
   cheio: {fileID: 21300000, guid: d4bd76bba79c9194588d5312855c3165, type: 3}
   vazio: {fileID: 21300000, guid: 4a4b4d44cef5134479fd2b6a085d706c, type: 3}
---- !u!114 &888830232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888830224}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6569cd7092f3ce448af0e1de66eee4e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3.5
-  rb: {fileID: 0}
-  cam: {fileID: 0}
 --- !u!114 &888830233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3376,11 +3360,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e4df270c339ff43bc3c8da23b44efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.98
+  speed: 0.989
   rigidbody: {fileID: 2048476263}
   spriteRenderer: {fileID: 2048476265}
   animator: {fileID: 2048476264}
-  heart: {fileID: 0}
+  heart: {fileID: 888830231}
 --- !u!50 &2048476263
 Rigidbody2D:
   serializedVersion: 4
@@ -3509,6 +3493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heart: {fileID: 888830231}
+  playerAnimator: {fileID: 888830228}
 --- !u!70 &2048476270
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3541,8 +3526,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004370767, y: -0.12620372}
-  m_Size: {x: 1.0385789, y: 1.0385789}
+  m_Offset: {x: 0.013963955, y: -0.17416835}
+  m_Size: {x: 1.5565987, y: 1.5565988}
   m_Direction: 0
 --- !u!61 &2048476271
 BoxCollider2D:
