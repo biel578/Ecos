@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Move_Protet : MonoBehaviour
 {
     private float input_y;
+    public float speed;
+    private bool insideTrigger = false;
     #region Movimentação do jogador
     [SerializeField]
     private float velocidadeMovimento;
@@ -34,11 +37,20 @@ public class Move_Protet : MonoBehaviour
     [SerializeField]
     private Color corDirecaoMovimento;
     // Start is called before the first frame update
+    void Start()
+    {
+        if (rigidbody == null) Debug.LogError("Rigidbody2D não está atribuído no Inspector.", this);
+        if (spriteRenderer == null) Debug.LogError("SpriteRenderer não está atribuído no Inspector.", this);
+        if (animator == null) Debug.LogError("Animator não está atribuído no Inspector.", this);
+    }
 
     // Update is called once per frame
     void Update()
     {
-        OnTriggerStay2D();
+        if(insideTrigger)
+        {
+            Debug.Log("Dentro do trigger");
+        }
     }
 
     private void OnDrawGizmos(){
@@ -89,7 +101,7 @@ public class Move_Protet : MonoBehaviour
             Vector2 direcao = posicaoAlvo - posicaoAtual;
             direcao = direcao.normalized;
 
-            this.rigidbody.velocity = (this.velocidadeMovimento * direcao);
+            this.rigidbody.velocity = (direcao * this.velocidadeMovimento);
 
             if (this.rigidbody.velocity.x > 0)
             {
@@ -112,10 +124,36 @@ public class Move_Protet : MonoBehaviour
     {
         if(collider.CompareTag("Player"))
         {
-            collider.Rigidbody.AddForce(-0.1F * this.GetComponent<Collider>().Rigidbody.velocity);
-            this.
-        }else{
-            PararMovimentacao();
+            insideTrigger = true;
+            Vector2 PosicaoAtual = this.transform.position;
+            Vector2 PosicaoPlayer = collider.transform.position;
+
+            //transform.position = Vector2.MoveTowards(PosicaoPlayer, PosicaoAtual, speed);
+
+            Vector2 direcao = PosicaoPlayer - PosicaoAtual;
+            int valorX = Mathf.RoundToInt(direcao.x);
+            if (valorX > 0)
+            {
+                transform.position = Vector2.MoveTowards(PosicaoPlayer, PosicaoAtual, 1);
+                this.spriteRenderer.flipX = true;
+                this.animator.SetBool("movendo", true);
+            }
+            if (valorX < 0)
+            {
+                transform.position = Vector2.MoveTowards(PosicaoPlayer, PosicaoAtual, 1);
+                this.spriteRenderer.flipX = false;
+                this.animator.SetBool("movendo", false);
+            }
+            this.animator.SetBool("movendo", false);
+        }
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Player"))
+        {
+            insideTrigger = false;
         }
     }
 
