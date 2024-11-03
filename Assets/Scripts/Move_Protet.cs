@@ -19,6 +19,7 @@ public class Move_Protet : MonoBehaviour
 
     [SerializeField]
     private Animator animator;
+    public heart_system heart;
     // Start is called before the first frame update
     
 
@@ -73,9 +74,14 @@ public class Move_Protet : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            for(int i = 0; i < 2; i++)
+            {
+                heart.vida--;
+                heart.HealthLogic();
+            }
             this.animator.SetBool("movendo", false);
             PararMovimentacao();
-            this.rigidbody.velocity = Vector2.zero;
+            
         }
     }
     private void PararMovimentacao()

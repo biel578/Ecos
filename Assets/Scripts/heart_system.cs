@@ -23,9 +23,9 @@ public class heart_system : MonoBehaviour
         HealthLogic();
     }
 
-    void HealthLogic()
+    public void HealthLogic()
     {
-        if(vida < vidaMax)
+        if(vida > vidaMax)
         {
             vida = vidaMax;
         }
