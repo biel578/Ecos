@@ -12,6 +12,8 @@ public class PLayer_Controller : MonoBehaviour
     public float speed = 6.5f;
     bool isWalking = false;
     bool facingR = true;
+    bool isFiring = false;
+    private Vector2 movement;
 
     private void Awake()
     {
@@ -21,6 +23,7 @@ public class PLayer_Controller : MonoBehaviour
     void Start()
     {
         isWalking = false;
+        isFiring = false;
     }
 
     // Update is called once per frame
@@ -28,22 +31,24 @@ public class PLayer_Controller : MonoBehaviour
     {
         input_x = Input.GetAxisRaw("Horizontal");
         input_y = Input.GetAxisRaw("Vertical");
+        var move = new Vector3(input_x, input_y, rb.velocity.y).normalized;
         isWalking = (input_x !=0 || input_y !=0);
-
+        isFiring = (!isWalking);
 
         if (isWalking)
         {
-            var move = new Vector3(input_x, input_y, rb.velocity.y).normalized;
             transform.position += move * speed * Time.deltaTime;
             playerAnimator.SetFloat("input_x", input_x);
-            playerAnimator.SetFloat("input_y", input_y);
+            isFiring = false;
         }
 
         playerAnimator.SetBool("isWalking", isWalking);
 
-        if(Input.GetButtonDown("Fire1"))
-            playerAnimator.SetTrigger("atacar");
-            
+        if(Input.GetButtonDown("Fire1")){
+            move = Vector2.zero;
+            rb.velocity = Vector2.zero;
+            playerAnimator.SetTrigger("fire");
+        }   
 
         if (input_x > 0 && !facingR)
         {
@@ -53,6 +58,7 @@ public class PLayer_Controller : MonoBehaviour
         {
             flip();
         }
+
     }
 
     void flip()
@@ -62,5 +68,9 @@ public class PLayer_Controller : MonoBehaviour
         gameObject.transform.localScale = currentScale;
 
         facingR = !facingR;
+    }
+    void noFire()
+    {
+        isFiring = false;
     }
 }
