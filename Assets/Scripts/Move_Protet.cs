@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -8,13 +10,7 @@ public class Move_Protet : MonoBehaviour
     private float input_y;
     public float speed;
     private bool insideTrigger = false;
-    #region Movimentação do jogador
-    [SerializeField]
-    private float velocidadeMovimento;
-
-    [SerializeField]
-    private float distanciaMinima;
-
+    private bool outsideTrigger = false;
     [SerializeField]
     private new Rigidbody2D rigidbody;
 
@@ -23,26 +19,8 @@ public class Move_Protet : MonoBehaviour
 
     [SerializeField]
     private Animator animator;
-    #endregion Movimentação do jogador
-
-    [SerializeField]
-    private Transform alvo;
-
-    [SerializeField]
-    private float raioVisao;
-    [SerializeField]
-    private LayerMask layerAreaVisao;
-    [SerializeField]
-    private Color corAreaVisao;
-    [SerializeField]
-    private Color corDirecaoMovimento;
     // Start is called before the first frame update
-    void Start()
-    {
-        if (rigidbody == null) Debug.LogError("Rigidbody2D não está atribuído no Inspector.", this);
-        if (spriteRenderer == null) Debug.LogError("SpriteRenderer não está atribuído no Inspector.", this);
-        if (animator == null) Debug.LogError("Animator não está atribuído no Inspector.", this);
-    }
+    
 
     // Update is called once per frame
     void Update()
@@ -51,112 +29,53 @@ public class Move_Protet : MonoBehaviour
         {
             Debug.Log("Dentro do trigger");
         }
-    }
-
-    private void OnDrawGizmos(){
-        Gizmos.color = this.corAreaVisao;
-        Gizmos.DrawWireSphere(this.transform.position, this.raioVisao); // criando campo de visão visivel kkkk
-        if(this.alvo != null)
+        else if(outsideTrigger)
         {
-            Gizmos.color = this.corDirecaoMovimento;
-            Gizmos.DrawLine(this.transform.position, this.alvo.position);
+            Debug.Log("Fora do trigger!");
         }
     }
-
-    private void ProcurarJogador()
-    {
-       Collider2D colisor = Physics2D.OverlapCircle(this.transform.position, this.raioVisao, this.layerAreaVisao);
-       if (colisor != null) //jogador dentro da area de visão
-       {
-        Vector2 posicaoAtual = this.transform.position;
-        Vector2 posicaoAlvo = colisor.transform.position;
-        Vector2 direcao = posicaoAlvo - posicaoAtual;
-        direcao = direcao.normalized;
-
-        RaycastHit2D hit = Physics2D.Raycast(posicaoAtual, direcao);
-        if(hit.transform != null)
-        {
-            if(hit.transform.CompareTag("Player"))
-            {
-                this.alvo = colisor.transform;
-            }else
-            {
-                this.alvo = null;
-            }
-        }
-       }
-       else
-       {
-        this.alvo = null;
-       }
-    }
-    private void Mover()
-    {
-        Vector2 posicaoAlvo = this.alvo.position;
-        Vector2 posicaoAtual = this.transform.position;
-        Vector2 input_y = this.alvo.position;
-        float distancia = Vector2.Distance(posicaoAtual, posicaoAlvo);
-        if (distancia >= this.distanciaMinima)
-        {
-            Vector2 direcao = posicaoAlvo - posicaoAtual;
-            direcao = direcao.normalized;
-
-            this.rigidbody.velocity = (direcao * this.velocidadeMovimento);
-
-            if (this.rigidbody.velocity.x > 0)
-            {
-                this.spriteRenderer.flipX = true;
-            }
-            else if (this.rigidbody.velocity.x < 0)
-            {
-                this.spriteRenderer.flipX = false;
-            }
-            this.animator.SetBool("movendo", true);
-        }
-        else {
-            PararMovimentacao();
-            this.animator.SetBool("movendo", false);
-        }
-
-    }
-
     private void OnTriggerStay2D(Collider2D collider)
     {
         if(collider.CompareTag("Player"))
         {
             insideTrigger = true;
+            outsideTrigger = false;
             Vector2 PosicaoAtual = this.transform.position;
             Vector2 PosicaoPlayer = collider.transform.position;
 
-            //transform.position = Vector2.MoveTowards(PosicaoPlayer, PosicaoAtual, speed);
+            transform.position = Vector2.Lerp(PosicaoPlayer, PosicaoAtual, speed);
 
             Vector2 direcao = PosicaoPlayer - PosicaoAtual;
+            direcao = direcao.normalized;
+            
             int valorX = Mathf.RoundToInt(direcao.x);
             if (valorX > 0)
             {
-                transform.position = Vector2.MoveTowards(PosicaoPlayer, PosicaoAtual, 1);
                 this.spriteRenderer.flipX = true;
-                this.animator.SetBool("movendo", true);
             }
-            if (valorX < 0)
+            else if (valorX < 0)
             {
-                transform.position = Vector2.MoveTowards(PosicaoPlayer, PosicaoAtual, 1);
                 this.spriteRenderer.flipX = false;
-                this.animator.SetBool("movendo", false);
             }
-            this.animator.SetBool("movendo", false);
+            this.animator.SetBool("movendo", true);
         }
-        
     }
-
     private void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
         {
             insideTrigger = false;
+            outsideTrigger = true;
+            PararMovimentacao();
         }
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            this.animator.SetBool("movendo", false);
+        }
+    }
     private void PararMovimentacao()
     {
         this.rigidbody.velocity = Vector2.zero;
