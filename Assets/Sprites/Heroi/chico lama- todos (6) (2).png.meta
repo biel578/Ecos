@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 64d3324904f6c894eb8720e1aa1be356
+guid: a7dabe3bea831bc499759d1eba61c497
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,17 +93,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chico lama- todos (1)_0
+      name: chico lama- todos (6) (2)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
+        y: 320
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cc8f40ebedad2743aa856c997f8f2d1
-      internalID: -2135941659
+      spriteID: b5fbbe48177005c4aa21586dd4bd960c
+      internalID: -1942908095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos (1)_1
+      name: chico lama- todos (6) (2)_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 160
+        y: 320
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90592955fc4cbed44a9a3d0c5ba63104
-      internalID: -1295305237
+      spriteID: 2f513eae35c53ef4d83adecbb54d6c65
+      internalID: -804523789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos (1)_2
+      name: chico lama- todos (6) (2)_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
+        x: 320
+        y: 320
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75b73db8cceaabe4580c71bccca55a74
-      internalID: 1616847402
+      spriteID: 238065aba3e5edb48bb4bd6201ac9df8
+      internalID: -2100635208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos (1)_3
+      name: chico lama- todos (6) (2)_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba3cd91406407a24c9aa24b0588a8863
-      internalID: 2107849878
+      spriteID: b27c3c08479ba10469140f52ff3bff8a
+      internalID: 683689994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos (1)_4
+      name: chico lama- todos (6) (2)_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 160
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e0f8c6c54c117f4cae200d6bacd83a0
-      internalID: -902859543
+      spriteID: eda7c0a207dc4214fac9626a874c0e96
+      internalID: 1814143013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos (1)_5
+      name: chico lama- todos (6) (2)_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 320
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8e0dd137812aa44cb0da5670da034a2
-      internalID: -1276905480
+      spriteID: ea183a5075eb0d941955c0fc06835160
+      internalID: 1771839116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos (1)_6
+      name: chico lama- todos (6) (2)_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e70ac0ad62898a4f96031260f4106f7
-      internalID: 60055465
+      spriteID: 840e74dab5cce8441957dc2623703f79
+      internalID: 1084803516
       vertices: []
       indices: 
       edges: []
@@ -254,13 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      chico lama- todos (1)_0: -2135941659
-      chico lama- todos (1)_1: -1295305237
-      chico lama- todos (1)_2: 1616847402
-      chico lama- todos (1)_3: 2107849878
-      chico lama- todos (1)_4: -902859543
-      chico lama- todos (1)_5: -1276905480
-      chico lama- todos (1)_6: 60055465
+      chico lama- todos (6) (2)_0: -1942908095
+      chico lama- todos (6) (2)_1: -804523789
+      chico lama- todos (6) (2)_2: -2100635208
+      chico lama- todos (6) (2)_3: 683689994
+      chico lama- todos (6) (2)_4: 1814143013
+      chico lama- todos (6) (2)_5: 1771839116
+      chico lama- todos (6) (2)_6: 1084803516
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
