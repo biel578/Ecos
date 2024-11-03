@@ -48,7 +48,7 @@ public class Move_Protet : MonoBehaviour
             Vector2 direcao = PosicaoPlayer - PosicaoAtual;
             direcao = direcao.normalized;
             
-            int valorX = Mathf.RoundToInt(direcao.x);
+            int valorX = Mathf.RoundToInt(direcao.normalized.x);
             if (valorX > 0)
             {
                 this.spriteRenderer.flipX = true;
@@ -74,6 +74,8 @@ public class Move_Protet : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             this.animator.SetBool("movendo", false);
+            PararMovimentacao();
+            this.rigidbody.velocity = Vector2.zero;
         }
     }
     private void PararMovimentacao()

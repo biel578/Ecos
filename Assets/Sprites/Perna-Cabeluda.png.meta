@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7adeda95c5e572c449ce98434e7c1629
+guid: fc67a3326a8595548abd15a4638a2096
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -110,148 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chico lama- todos-5.png (2) 1_0
+      name: Perna-Cabeluda_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 320
-        width: 160
-        height: 160
-      alignment: 9
-      pivot: {x: 0.48, y: 0.08}
+        x: 10
+        y: 798
+        width: 383
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e324fe36c1a5c954fb08e1887037974c
-      internalID: 1817948014
+      spriteID: 5c67005e258fa444ea29aa1b15ece759
+      internalID: 1086472980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos-5.png (2) 1_1
+      name: Perna-Cabeluda_1
       rect:
         serializedVersion: 2
-        x: 160
-        y: 320
-        width: 160
-        height: 160
-      alignment: 9
-      pivot: {x: 0.45, y: 0.08}
+        x: 393
+        y: 798
+        width: 383
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73b0e3545dca4f84283dcb1035a96c63
-      internalID: -2143495961
+      spriteID: b721bb26d9bf453469383cc6de150013
+      internalID: 1432477137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos-5.png (2) 1_2
+      name: Perna-Cabeluda_2
       rect:
         serializedVersion: 2
-        x: 320
-        y: 320
-        width: 160
-        height: 160
-      alignment: 9
-      pivot: {x: 0.45, y: 0.08}
+        x: 776
+        y: 798
+        width: 383
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55abe2897c1c77741a262bfd8dfb61bd
-      internalID: -818625557
+      spriteID: 8d303a86f67f3884e8e48c24368e200f
+      internalID: 1324624258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos-5.png (2) 1_3
+      name: Perna-Cabeluda_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
-        width: 160
-        height: 160
-      alignment: 9
-      pivot: {x: 0.45, y: 0.08}
+        x: 1159
+        y: 798
+        width: 383
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7e4668a6aa052b46a0c42288deed906
-      internalID: -317615607
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chico lama- todos-5.png (2) 1_4
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 160
-        width: 160
-        height: 160
-      alignment: 9
-      pivot: {x: 0.45, y: 0.08}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7d603418ecc7d941a6f5d8948114e15
-      internalID: -579202334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chico lama- todos-5.png (2) 1_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 160
-        width: 160
-        height: 160
-      alignment: 9
-      pivot: {x: 0.45, y: 0.08}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7c15058db8a00f4c85dc136529d467f
-      internalID: -1959183971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chico lama- todos-5.png (2) 1_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 160
-      alignment: 9
-      pivot: {x: 0.45, y: 0.08}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc21bda839b25de48b87bf40f05a6147
-      internalID: 296194315
+      spriteID: 6d2a4576033b6274887f681ad4047dc0
+      internalID: -1882739381
       vertices: []
       indices: 
       edges: []
@@ -267,13 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      chico lama- todos-5.png (2) 1_0: 1817948014
-      chico lama- todos-5.png (2) 1_1: -2143495961
-      chico lama- todos-5.png (2) 1_2: -818625557
-      chico lama- todos-5.png (2) 1_3: -317615607
-      chico lama- todos-5.png (2) 1_4: -579202334
-      chico lama- todos-5.png (2) 1_5: -1959183971
-      chico lama- todos-5.png (2) 1_6: 296194315
+      Perna-Cabeluda_0: 1086472980
+      Perna-Cabeluda_1: 1432477137
+      Perna-Cabeluda_2: 1324624258
+      Perna-Cabeluda_3: -1882739381
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
