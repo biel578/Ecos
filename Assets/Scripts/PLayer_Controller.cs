@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
+using UnityEngine.SceneManagement;
 
 public class PLayer_Controller : MonoBehaviour
 {
@@ -15,9 +16,7 @@ public class PLayer_Controller : MonoBehaviour
     private bool isFire = false;
 
 
-    private void Awake()
-    {
-    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +27,7 @@ public class PLayer_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isFire == true){
+        if(isFire == false){
             isWalking = false;
         }
         input_x = Input.GetAxisRaw("Horizontal");
