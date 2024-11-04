@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class PLayer_Controller : MonoBehaviour
 {
@@ -14,19 +15,24 @@ public class PLayer_Controller : MonoBehaviour
     private Vector2 movement;
     private bool facingR = true;
     private bool isFire = false;
-
+    public AudioClip firingLama;
+    private AudioManager audioManager;
 
     
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         isWalking = false;
         isFire = false;
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   if (Input.GetButtonDown("Fire1"))
+        {
+            audioManager.PlaySFX(firingLama);
+        }
         if(isFire == false){
             isWalking = false;
         }
@@ -72,5 +78,12 @@ public class PLayer_Controller : MonoBehaviour
             playerAnimator.SetTrigger("fire");
             isFire = true;
         }
+        
+    }
+    private void OnCollisionEnter2D(Collider2D collider)
+    {
+
+
+       
     }
 }

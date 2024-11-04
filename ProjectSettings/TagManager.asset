@@ -8,6 +8,7 @@ TagManager:
   - protetor
   - UI
   - perna
+  - Audio
   layers:
   - Default
   - TransparentFX

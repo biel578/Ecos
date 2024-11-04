@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class bullet : MonoBehaviour
 {
-    private int vidas = 20;
     public GameObject hitEffect;
 
     void Start()
@@ -24,18 +25,16 @@ public class bullet : MonoBehaviour
         {
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
             Destroy(effect, 0.55f);
-            for(int i = 0; i<=20;)
-            {
-                Destroy(collision.gameObject);
-                i++;
-            }
+            Destroy(collision.gameObject);
+            SceneManager.LoadScene("Victory");
         }
-
         if (collision.gameObject.CompareTag("protetor"))
         {
             Destroy(collision.gameObject);
         }
-
-
+    }
+    void OnDestroy()
+    {   
+        
     }
 }

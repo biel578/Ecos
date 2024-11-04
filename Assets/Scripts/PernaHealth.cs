@@ -28,11 +28,11 @@ void Start()
             Destroy(gameObject);
         }
     }
-    private void OnTriggerEnter2D(Collider collision)
+    private void OnTriggerStay2D(Collider2D collider)
     {
-        if (collision.tag != "lama")
+        if (collider.tag != "lama")
         {
-            gameObject.transform.parent = collision.gameObject.transform;
+            gameObject.transform.parent = collider.gameObject.transform;
             Destroy(gameObject);
             GetComponent<CircleCollider2D>().enabled = false;
         }
