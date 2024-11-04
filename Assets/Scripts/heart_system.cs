@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class heart_system : MonoBehaviour
 {
+    public bool isDead;
     public int vida;
     public int vidaMax;
+    PLayer_Controller playerAnimator;
 
     public Image[] coracao;
     public Sprite cheio;
@@ -14,13 +16,14 @@ public class heart_system : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAnimator = GetComponent<PLayer_Controller>();
     }
 
     // Update is called once per frame
     void Update()
     {
         HealthLogic();
+        DeadState();
     }
 
     public void HealthLogic()
@@ -48,6 +51,17 @@ public class heart_system : MonoBehaviour
             {
                 coracao[i].enabled = false;
             }
+        }
+    }
+
+    void DeadState()
+    {
+        if(vida <= 0 )
+        {
+            isDead = true;
+            playerAnimator.playerAnimator.SetBool("isDead", isDead);
+            GetComponent<PLayer_Controller>().enabled = false;
+            Destroy(gameObject, 1.5f);
         }
     }
 }

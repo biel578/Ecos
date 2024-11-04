@@ -6,7 +6,6 @@ using UnityEngine.Scripting.APIUpdating;
 public class PLayer_Controller : MonoBehaviour
 {
     public Animator playerAnimator;
-    private Rigidbody2D rb;
     float input_x = 0;
     float input_y = 0;
     public float speed = 6.5f;
@@ -18,7 +17,6 @@ public class PLayer_Controller : MonoBehaviour
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
     }
     // Start is called before the first frame update
     void Start()
@@ -38,7 +36,7 @@ public class PLayer_Controller : MonoBehaviour
         isWalking = (input_x !=0 || input_y !=0);
         if(isWalking)
         {
-            var move = new Vector3(input_x, input_y, rb.velocity.y).normalized;
+            var move = new Vector3(input_x, input_y).normalized;
             transform.position += move * speed * Time.deltaTime;
             playerAnimator.SetFloat("input_x", input_x);
             playerAnimator.SetFloat("input_y", input_y);

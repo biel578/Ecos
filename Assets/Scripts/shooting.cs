@@ -11,17 +11,19 @@ public class shooting : MonoBehaviour
     public GameObject lama1Prefab;
 
     public float bulletforce = 20f;
+    public float cooldownTime = 1.0f;  // Tempo de cooldown em segundos
+    private float lastFireTime = 0.0f;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown("Fire1") && Time.time >= lastFireTime + cooldownTime)
         {
             Shoot();
         }
 
-        direcao = Input.GetAxisRaw("Horizontal");
 
+        direcao = Input.GetAxisRaw("Horizontal");
         if(direcao > 0 && !facingR)
         {
             flip();

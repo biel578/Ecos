@@ -13,14 +13,17 @@ public class bullet : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-
-        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 0.55f);
-        Destroy(gameObject);
+        if(!collision.gameObject.CompareTag("UI")){
+            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 0.55f);
+            Destroy(gameObject);
+        }
 
         if (collision.gameObject.CompareTag("protetor"))
         {
             Destroy(collision.gameObject);
         }
+
+
     }
 }
