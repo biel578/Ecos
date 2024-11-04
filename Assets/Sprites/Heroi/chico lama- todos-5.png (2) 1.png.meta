@@ -110,148 +110,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chico lama- todos-5.png (2)_0
+      name: chico lama- todos-5.png (2) 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 320
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.48, y: 0.08}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ec5a2849e4515542b0692fbc9ec9d5f
-      internalID: 325303752
+      spriteID: e324fe36c1a5c954fb08e1887037974c
+      internalID: 1817948014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos-5.png (2)_1
+      name: chico lama- todos-5.png (2) 1_1
       rect:
         serializedVersion: 2
         x: 160
         y: 320
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45, y: 0.08}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2eeb95a8583774f418be98391ee43e22
-      internalID: -965108053
+      spriteID: 73b0e3545dca4f84283dcb1035a96c63
+      internalID: -2143495961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos-5.png (2)_2
+      name: chico lama- todos-5.png (2) 1_2
       rect:
         serializedVersion: 2
         x: 320
         y: 320
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45, y: 0.08}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93ec2c23b0441d5459683b5038012ebc
-      internalID: -1303890396
+      spriteID: 55abe2897c1c77741a262bfd8dfb61bd
+      internalID: -818625557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos-5.png (2)_3
+      name: chico lama- todos-5.png (2) 1_3
       rect:
         serializedVersion: 2
         x: 0
         y: 160
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45, y: 0.08}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bea8ca16c44f7a4b8193908ffde9a31
-      internalID: 107676226
+      spriteID: d7e4668a6aa052b46a0c42288deed906
+      internalID: -317615607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos-5.png (2)_4
+      name: chico lama- todos-5.png (2) 1_4
       rect:
         serializedVersion: 2
         x: 160
         y: 160
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45, y: 0.08}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad462c2e41e9e3948af6bb19e6eb2d59
-      internalID: -1763351360
+      spriteID: f7d603418ecc7d941a6f5d8948114e15
+      internalID: -579202334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos-5.png (2)_5
+      name: chico lama- todos-5.png (2) 1_5
       rect:
         serializedVersion: 2
         x: 320
         y: 160
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45, y: 0.08}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2083f4db523886468ae55342f83a7c1
-      internalID: -763922763
+      spriteID: d7c15058db8a00f4c85dc136529d467f
+      internalID: -1959183971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chico lama- todos-5.png (2)_6
+      name: chico lama- todos-5.png (2) 1_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 160
         height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.45, y: 0.08}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50cdf348c45529440a504470b9d1f47f
-      internalID: 134884206
+      spriteID: bc21bda839b25de48b87bf40f05a6147
+      internalID: 296194315
       vertices: []
       indices: 
       edges: []
@@ -267,13 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      chico lama- todos-5.png (2)_0: 325303752
-      chico lama- todos-5.png (2)_1: -965108053
-      chico lama- todos-5.png (2)_2: -1303890396
-      chico lama- todos-5.png (2)_3: 107676226
-      chico lama- todos-5.png (2)_4: -1763351360
-      chico lama- todos-5.png (2)_5: -763922763
-      chico lama- todos-5.png (2)_6: 134884206
+      chico lama- todos-5.png (2) 1_0: 1817948014
+      chico lama- todos-5.png (2) 1_1: -2143495961
+      chico lama- todos-5.png (2) 1_2: -818625557
+      chico lama- todos-5.png (2) 1_3: -317615607
+      chico lama- todos-5.png (2) 1_4: -579202334
+      chico lama- todos-5.png (2) 1_5: -1959183971
+      chico lama- todos-5.png (2) 1_6: 296194315
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

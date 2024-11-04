@@ -7,47 +7,39 @@ using UnityEngine.XR;
 
 public class Move_Protet : MonoBehaviour
 {
+    public Transform player;
     private float input_y;
     public float speed;
-    private bool insideTrigger = false;
-    private bool outsideTrigger = false;
+    private bool isChasing = false;
     [SerializeField]
-    private new Rigidbody2D rigidbody;
+    public new Rigidbody2D rb;
 
     [SerializeField]
     private SpriteRenderer spriteRenderer;
 
     [SerializeField]
     private Animator animator;
+    public heart_system heart;
     // Start is called before the first frame update
     
 
     // Update is called once per frame
     void Update()
     {
-        if(insideTrigger)
+        if(isChasing == true)
         {
-            Debug.Log("Dentro do trigger");
-        }
-        else if(outsideTrigger)
-        {
-            Debug.Log("Fora do trigger!");
+            Vector2 direcao = (player.position - transform.position).normalized;
+            transform.position += (Vector3)direcao * speed * Time.deltaTime;
         }
     }
     private void OnTriggerStay2D(Collider2D collider)
     {
         if(collider.CompareTag("Player"))
         {
-            insideTrigger = true;
-            outsideTrigger = false;
             Vector2 PosicaoAtual = this.transform.position;
             Vector2 PosicaoPlayer = collider.transform.position;
 
-            transform.position = Vector2.Lerp(PosicaoPlayer, PosicaoAtual, speed);
-
-            Vector2 direcao = PosicaoPlayer - PosicaoAtual;
-            direcao = direcao.normalized;
-            
+            Vector2 direcao = (PosicaoPlayer - PosicaoAtual).normalized;
             int valorX = Mathf.RoundToInt(direcao.x);
             if (valorX > 0)
             {
@@ -58,27 +50,34 @@ public class Move_Protet : MonoBehaviour
                 this.spriteRenderer.flipX = false;
             }
             this.animator.SetBool("movendo", true);
+            isChasing = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
         {
-            insideTrigger = false;
-            outsideTrigger = true;
             PararMovimentacao();
+            isChasing = false;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
+            for(int i = 0; i < 1; i++)
+            {
+                heart.vida--;
+                heart.HealthLogic();
+            }
             this.animator.SetBool("movendo", false);
+            PararMovimentacao();
+            
         }
     }
     private void PararMovimentacao()
     {
-        this.rigidbody.velocity = Vector2.zero;
+        this.rb.velocity = Vector2.zero;
         this.animator.SetBool("movendo", false);
     }
 }
