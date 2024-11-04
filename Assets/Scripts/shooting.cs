@@ -14,6 +14,7 @@ public class shooting : MonoBehaviour
     public float cooldownTime = 1.0f;  // Tempo de cooldown em segundos
     private float lastFireTime = 0.0f;
 
+
     // Update is called once per frame
     void Update()
     {
@@ -21,8 +22,6 @@ public class shooting : MonoBehaviour
         {
             Shoot();
         }
-
-
         direcao = Input.GetAxisRaw("Horizontal");
         if(direcao > 0 && !facingR)
         {
@@ -39,14 +38,12 @@ public class shooting : MonoBehaviour
         GameObject lama1 = Instantiate(lama1Prefab, firepoint.position, firepoint.rotation);
         Rigidbody2D rb = lama1.GetComponent<Rigidbody2D>();
         rb.AddForce(firepoint.transform.localScale * bulletforce, ForceMode2D.Impulse);
-
     }
     void flip()
     {
         Vector3 currentScale = firepoint.transform.localScale;
         currentScale.x *= -1;
         firepoint.transform.localScale = currentScale;
-
         facingR = !facingR;
     }
 }

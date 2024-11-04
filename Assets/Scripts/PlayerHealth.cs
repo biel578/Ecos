@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int currentHealth;
+    public int maxHealth;
 
-    // Update is called once per frame
-    void Update()
+    public int remaingtime;
+
+    public void ChangeHealth(int amount)
     {
-        
+        currentHealth += amount;
+
+        if(currentHealth < 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

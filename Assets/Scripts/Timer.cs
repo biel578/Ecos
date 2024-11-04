@@ -2,19 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System;
+using UnityEngine.SceneManagement;
+
 public class Timer : MonoBehaviour
 {
-    // Start is called before the first frame update
+    PLayer_Controller playerAnimator;
+    public bool isDead;
     [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] float remaingtime;
+    [SerializeField] float remainingTime = 60f;
 
-    // Update is called once per frame
     void Update()
     {
-        remaingtime -= Time.deltaTime;
-        int minutes = Mathf.FloorToInt(remaingtime / 60);
-        int seconds = Mathf.FloorToInt(remaingtime % 60);
-        timerText.text = String.Format("{0:00}:{1:00}", minutes, seconds);
+        if (remainingTime > 0)
+        {
+            remainingTime -= Time.deltaTime;
+            int minutes = Mathf.FloorToInt(remainingTime / 60);
+            int seconds = Mathf.FloorToInt(remainingTime % 60);
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+        else
+        {
+            timerText.color = Color.red;
+            GameOver();
+        }
+    }
+
+    void GameOver()
+    {
+        SceneManager.LoadScene("Game Over Tela");
     }
 }

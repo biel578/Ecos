@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 8e6251d0bec027342a9cdecdcd1647bf
+  - enabled: 1
+    path: Assets/Scenes/Game Over Tela.unity
+    guid: 43eaae694db96604a96f704909c78a1d
   m_configObjects: {}

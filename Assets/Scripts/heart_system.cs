@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class heart_system : MonoBehaviour
 {
@@ -59,9 +60,17 @@ public class heart_system : MonoBehaviour
         if(vida <= 0 )
         {
             isDead = true;
+
             playerAnimator.playerAnimator.SetBool("isDead", isDead);
             GetComponent<PLayer_Controller>().enabled = false;
-            Destroy(gameObject, 1.5f);
+            Destroy(gameObject, 2f);
+            SceneManager.LoadScene("Game Over Tela");
         }
+    }
+    void OnDestroy()
+    {
+        playerAnimator.playerAnimator.SetBool("isDead", isDead);
+        GetComponent<PLayer_Controller>().enabled = false;
+        
     }
 }
