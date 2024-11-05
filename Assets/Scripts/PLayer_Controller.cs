@@ -17,9 +17,6 @@ public class PLayer_Controller : MonoBehaviour
     private bool isFire = false;
     public AudioClip firingLama;
     private AudioManager audioManager;
-
-    
-    // Start is called before the first frame update
     void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
@@ -50,7 +47,7 @@ public class PLayer_Controller : MonoBehaviour
         playerAnimator.SetBool("isWalking", isWalking);
 
         
-        reset();
+        fire();
         
         isFire = false;   
         if (input_x > 0 && !facingR)
@@ -72,18 +69,11 @@ public class PLayer_Controller : MonoBehaviour
         facingR = !facingR;
     }
 
-    void reset()
+    void fire()
     {
         if (Input.GetButtonDown("Fire1")){
             playerAnimator.SetTrigger("fire");
             isFire = true;
         }
-        
-    }
-    private void OnCollisionEnter2D(Collider2D collider)
-    {
-
-
-       
     }
 }

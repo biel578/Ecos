@@ -481,7 +481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 260492585}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 260492587}
   animator: {fileID: 260492586}
   heart: {fileID: 888830231}
@@ -776,7 +776,7 @@ Transform:
   m_GameObject: {fileID: 336869555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.18, y: -0.52, z: 0}
+  m_LocalPosition: {x: 7.15, y: -0.52, z: 0}
   m_LocalScale: {x: 0.7361647, y: 0.7361647, z: 0.7361647}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -848,7 +848,7 @@ Transform:
   m_GameObject: {fileID: 413088681}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.5, y: -1.43, z: -10}
+  m_LocalPosition: {x: -14.26, y: -2.21, z: -10}
   m_LocalScale: {x: 1.1768, y: 1.1768, z: 1.1768}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1425,7 +1425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 579474284}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 579474286}
   animator: {fileID: 579474285}
   heart: {fileID: 888830231}
@@ -1921,7 +1921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 611251665}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 611251667}
   animator: {fileID: 611251666}
   heart: {fileID: 888830231}
@@ -2510,7 +2510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 751682608}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 751682610}
   animator: {fileID: 751682609}
   heart: {fileID: 888830231}
@@ -2851,7 +2851,7 @@ Transform:
   m_GameObject: {fileID: 888830224}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.5, y: -1.43, z: 0}
+  m_LocalPosition: {x: -14.26, y: -2.21, z: 0}
   m_LocalScale: {x: 0.6818, y: 0.6818, z: 0.6818}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2985,7 +2985,6 @@ MonoBehaviour:
   firepoint: {fileID: 562170057}
   lama1Prefab: {fileID: 4416960728539256897, guid: 2e23314bbbb2813498db40007390f9e4, type: 3}
   bulletforce: 10
-  cooldownTime: 1
 --- !u!1 &938521130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3055,7 +3054,7 @@ Rigidbody2D:
     m_Bits: 128
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &938521133
 MonoBehaviour:
@@ -3071,7 +3070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 3.5
-  rb: {fileID: 938521132}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 938521134}
   animator: {fileID: 938521131}
   heart: {fileID: 888830231}
@@ -3136,8 +3135,8 @@ Transform:
   m_GameObject: {fileID: 938521130}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.24, y: -2.5441, z: 0}
-  m_LocalScale: {x: 0.32179847, y: 0.32179847, z: 0.32179847}
+  m_LocalPosition: {x: 37.48, y: -2.58, z: 0}
+  m_LocalScale: {x: 0.51519936, y: 0.51519936, z: 0.51519936}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3437,7 +3436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 1066583278}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 1066583280}
   animator: {fileID: 1066583279}
   heart: {fileID: 888830231}
@@ -3881,7 +3880,7 @@ Transform:
   m_GameObject: {fileID: 1127991762}
   serializedVersion: 2
   m_LocalRotation: {x: -0.019179381, y: -0.043262716, z: -0.0008306831, w: 0.9988793}
-  m_LocalPosition: {x: 18.31, y: -0.52, z: 0}
+  m_LocalPosition: {x: 18.31, y: -0.49, z: 0.01}
   m_LocalScale: {x: 0.7361647, y: 0.7361647, z: 0.7361647}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4312,7 +4311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 1207181802}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 1207181804}
   animator: {fileID: 1207181803}
   heart: {fileID: 888830231}
@@ -4562,7 +4561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 1213438465}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 1213438467}
   animator: {fileID: 1213438466}
   heart: {fileID: 888830231}
@@ -5024,7 +5023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 1419705524}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 1419705526}
   animator: {fileID: 1419705525}
   heart: {fileID: 888830231}
@@ -5274,7 +5273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 1452135766}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 1452135768}
   animator: {fileID: 1452135767}
   heart: {fileID: 888830231}
@@ -5851,7 +5850,7 @@ Transform:
   m_GameObject: {fileID: 1647795719}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.4, y: -0.52, z: 0}
+  m_LocalPosition: {x: 28.915, y: -0.369, z: 0}
   m_LocalScale: {x: 0.7361647, y: 0.7361647, z: 0.7361647}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5974,7 +5973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 1674192708}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 1674192710}
   animator: {fileID: 1674192709}
   heart: {fileID: 888830231}
@@ -6308,7 +6307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 1725942937}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 1725942939}
   animator: {fileID: 1725942938}
   heart: {fileID: 888830231}
@@ -6787,7 +6786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 1812040757}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 1812040759}
   animator: {fileID: 1812040758}
   heart: {fileID: 888830231}
@@ -7281,7 +7280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 1896186436}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 1896186438}
   animator: {fileID: 1896186437}
   heart: {fileID: 888830231}
@@ -7663,7 +7662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 2048476263}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 2048476265}
   animator: {fileID: 2048476264}
   heart: {fileID: 888830231}
@@ -7993,7 +7992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 888830227}
   speed: 1.5
-  rb: {fileID: 2127009440}
+  rb: {fileID: 0}
   spriteRenderer: {fileID: 2127009442}
   animator: {fileID: 2127009441}
   heart: {fileID: 888830231}

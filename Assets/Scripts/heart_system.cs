@@ -10,7 +10,6 @@ public class heart_system : MonoBehaviour
     public int vida;
     public int vidaMax;
     PLayer_Controller playerAnimator;
-
     public Image[] coracao;
     public Sprite cheio;
     public Sprite vazio;
@@ -19,22 +18,18 @@ public class heart_system : MonoBehaviour
     {
         playerAnimator = GetComponent<PLayer_Controller>();
     }
-
     // Update is called once per frame
     void Update()
     {
         HealthLogic();
         DeadState();
     }
-
     public void HealthLogic()
     {
         if(vida > vidaMax)
         {
             vida = vidaMax;
         }
-
-
         for (int i = 0; i < coracao.Length; i++)
         {
             if(i < vida)
@@ -54,7 +49,6 @@ public class heart_system : MonoBehaviour
             }
         }
     }
-
     void DeadState()
     {
         if(vida <= 0 )
@@ -64,7 +58,7 @@ public class heart_system : MonoBehaviour
             playerAnimator.playerAnimator.SetBool("isDead", isDead);
             GetComponent<PLayer_Controller>().enabled = false;
             Destroy(gameObject, 2f);
-            SceneManager.LoadScene("Game Over Tela");
+            StartCoroutine(LoadSceneAfterDelay(1.5f));
         }
     }
     void OnDestroy()
@@ -72,5 +66,10 @@ public class heart_system : MonoBehaviour
         playerAnimator.playerAnimator.SetBool("isDead", isDead);
         GetComponent<PLayer_Controller>().enabled = false;
         
+    }
+    private IEnumerator LoadSceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("Game Over Tela");
     }
 }
